@@ -37,16 +37,13 @@ lua require("buffercd").setup()
 ```
 
 
-### Use with other plugins
+### Recommended settings
 #### Nvim-tree
 ```lua
 --init.lua
-local utils = require("buffercd.utils")
 
-local function on_dir_change()
-    local path = utils.get_cwd()
-    require("nvim-tree").change_dir(path)
-end
-
-vim.api.nvim_create_autocmd("DirChanged", { callback = on_dir_change })
+require("nvim-tree").setup {
+    update_cwd = true,
+    --...
+}
 ```
