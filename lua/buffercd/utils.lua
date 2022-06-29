@@ -5,7 +5,7 @@ function U.check_valid_buf(buf_num)
         return false
     end
     local exists = vim.api.nvim_buf_is_valid(buf_num)
-    return vim.bo[buf_num].buflisted and exists
+    return vim.bo[buf_num].buflisted and exists and vim.bo[buf_num].filetype ~= ""
 end
 
 function U.get_current_buf()
