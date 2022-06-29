@@ -7,7 +7,6 @@ restores the current directory of each buffer while you move in and out
 buffers. This is super handy to work with multiple projects, specially with
 plugins like
 [telescope-project.nvim](https://github.com/nvim-telescope/telescope-project.nvim).
-Requires nvim **nightly**.
 
 ### Installation
 
